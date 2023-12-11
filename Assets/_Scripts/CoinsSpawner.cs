@@ -4,7 +4,7 @@ using UnityEngine;
 public class CoinsSpawner : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D _mapBounds;
-    [SerializeField] private GameObject _prefab;
+    [SerializeField] private Coin _coin;
     [SerializeField] private uint _count;
 
     private void Start()
@@ -19,7 +19,7 @@ public class CoinsSpawner : MonoBehaviour
         {
             var position = new Vector3(positionX, positionY, 0);
 
-            Instantiate(_prefab, position, Quaternion.identity);
+            Instantiate(_coin, position, Quaternion.identity);
 
             positionX += offset;
         }

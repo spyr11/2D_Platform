@@ -15,7 +15,9 @@ public class Coin : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time * _speed) * _duration + _currentPositionY, transform.position.z);
+        transform.position = new Vector3(transform.position.x,
+                                         Mathf.Sin(Time.time * _speed) * _duration + _currentPositionY,
+                                          transform.position.z);
 
         transform.Rotate(Vector2.up, _speed);
     }

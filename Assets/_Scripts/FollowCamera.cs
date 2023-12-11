@@ -2,7 +2,7 @@ using UnityEngine;
 
 class FollowCamera : MonoBehaviour
 {
-    [SerializeField] private GameObject _prefab;
+    [SerializeField] private Transform _target;
     [SerializeField] private BoxCollider2D _mapBounds;
 
     private Vector3 _newPosition;
@@ -17,10 +17,10 @@ class FollowCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (_prefab != null)
+        if (_target != null)
         {
             _newPosition = transform.position;
-            _newPosition.x = Mathf.Clamp(_prefab.transform.position.x, _minBoundX, _maxBoundX);
+            _newPosition.x = Mathf.Clamp(_target.position.x, _minBoundX, _maxBoundX);
         }
 
         _minBoundX = Mathf.Clamp(_minBoundX, _newPosition.x, _maxBoundX);
