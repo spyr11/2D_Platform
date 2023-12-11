@@ -196,6 +196,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2124911414}
     m_Modifications:
+    - target: {fileID: 852663228861666430, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841959781854732583, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
+      propertyPath: _maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3840062900163189301, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
       propertyPath: m_Name
       value: BlobPlayer_Pink_0 (1)
@@ -244,9 +252,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7186933954286508980, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
-      propertyPath: _maxSpeed
-      value: 10
+    - target: {fileID: 8337524099904859744, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -636,6 +644,10 @@ PrefabInstance:
       propertyPath: _pointsPrefab
       value: 
       objectReference: {fileID: 7625442560066731742, guid: d99e6243f5623b9b2ac48925bd70ec2d, type: 3}
+    - target: {fileID: 8135808433378636362, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
+      propertyPath: _maxSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8318318849311050371, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
       propertyPath: m_Name
       value: Platform_Wood (1)
@@ -1905,6 +1917,10 @@ PrefabInstance:
       propertyPath: _pointsPrefab
       value: 
       objectReference: {fileID: 7625442560066731742, guid: d99e6243f5623b9b2ac48925bd70ec2d, type: 3}
+    - target: {fileID: 8135808433378636362, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
+      propertyPath: _maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8318318849311050371, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
       propertyPath: m_Name
       value: Platform_Wood (3)
@@ -6846,6 +6862,10 @@ PrefabInstance:
       propertyPath: _pointsPrefab
       value: 
       objectReference: {fileID: 7625442560066731742, guid: d99e6243f5623b9b2ac48925bd70ec2d, type: 3}
+    - target: {fileID: 8135808433378636362, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
+      propertyPath: _maxSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8318318849311050371, guid: acf8ef6185de3278382606f60b493f5a, type: 3}
       propertyPath: m_Name
       value: Platform_Wood (2)
@@ -7098,10 +7118,6 @@ PrefabInstance:
     - target: {fileID: 3853695810077246955, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7186933954286508980, guid: 9da324b3de8e3bdcbb73044cef16847f, type: 3}
-      propertyPath: _maxSpeed
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

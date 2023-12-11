@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1653731992090731246}
   - component: {fileID: 6996469098518231458}
-  - component: {fileID: 3634685627403260645}
   - component: {fileID: 5953339489286665653}
   - component: {fileID: 3987602010915286067}
   - component: {fileID: -2380464725929460226}
+  - component: {fileID: 8135808433378636362}
   m_Layer: 0
   m_Name: Platform_Wood
   m_TagString: Untagged
@@ -88,20 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3634685627403260645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8318318849311050371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d32532e3aab78b39ec7b472369b87b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pointsPrefab: {fileID: 7625442560066731742, guid: d99e6243f5623b9b2ac48925bd70ec2d, type: 3}
-  _maxSpeed: 5
 --- !u!61 &5953339489286665653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +164,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8008a1ba14a8c32b21b6213d2d6e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8135808433378636362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8318318849311050371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d32532e3aab78b39ec7b472369b87b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSpeed: 5
+  _path: {fileID: 0}

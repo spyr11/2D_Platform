@@ -2,22 +2,21 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    [SerializeField] GameObject _pointsPrefab;
     [SerializeField] private float _maxSpeed;
+    [SerializeField] private Transform _path;
 
     private Transform[] _points;
     private int _currentIndex;
-    
+
     private void Start()
     {
-        _pointsPrefab = Instantiate(_pointsPrefab, transform.position, transform.rotation);
-        _points = new Transform[_pointsPrefab.transform.childCount];
+        _points = new Transform[_path.childCount];
 
-        for (int i = 0; i < _pointsPrefab.transform.childCount; i++)
+        for (int i = 0; i < _points.Length; i++)
         {
-            _points[i] = _pointsPrefab.transform.GetChild(i);
+            _points[i] = _path.GetChild(i);
         }
-
+        
         _currentIndex = Random.Range(0, _points.Length);
     }
 

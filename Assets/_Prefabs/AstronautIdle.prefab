@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3408904928674260179}
   - component: {fileID: 7607086332386996432}
   - component: {fileID: 580588425739355926}
+  - component: {fileID: -7130674029409323321}
   m_Layer: 0
   m_Name: AstronautIdle
   m_TagString: Untagged
@@ -195,7 +196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 2671234818264208753}
-  _animator: {fileID: 3408904928674260179}
   _maxSpeed: 10
 --- !u!114 &580588425739355926
 MonoBehaviour:
@@ -210,3 +210,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blowPrefab: {fileID: 5156614889071220900, guid: 9a77d57c8d3bc1f4faad35339eb35280, type: 3}
+--- !u!114 &-7130674029409323321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989479419943982149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb3d8c0e9166dc969d144cd4255fb2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement: {fileID: 0}
+  _animator: {fileID: 0}

@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
 public class Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody2D;
-    [SerializeField] private Animator _animator;
+
     [SerializeField] private float _maxSpeed;
+
+    public event UnityAction<float> OnSpeedChanged;
+    public event UnityAction<bool> OnJumpingChanged;
 
     private float _speed;
     private float _jumpForce;
@@ -15,10 +18,9 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
 
         _jumpForce = 600f; ;
-        _speed = _maxSpeed;
+        _speed = 0;
     }
 
     private void Update()
@@ -27,29 +29,34 @@ public class Movement : MonoBehaviour
         {
             _isJumping = true;
             _rigidbody2D.AddForce(Vector2.up * _jumpForce);
+
+            OnJumpingChanged?.Invoke(_isJumping);
+
         }
         else if (Input.GetKey(KeyCode.A))
         {
             _speed = -_maxSpeed;
+            OnSpeedChanged?.Invoke(_speed);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             _speed = _maxSpeed;
+            OnSpeedChanged?.Invoke(_speed);
+
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
         {
             _speed = 0f;
+            OnSpeedChanged?.Invoke(_speed);
         }
 
         Move();
-
-        _animator.SetBool(PlayerAnimatorData.Params.IsJumping, _isJumping);
-        _animator.SetFloat(PlayerAnimatorData.Params.Speed,Mathf.Abs( _speed));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         _isJumping = false;
+        OnJumpingChanged?.Invoke(_isJumping);
     }
 
     private void Move()
